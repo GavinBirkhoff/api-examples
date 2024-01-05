@@ -1,0 +1,48 @@
+{
+  "name": "express-jsonfile",
+  "version": "1.0.0-alpha.0",
+  "description": "REST API",
+  "scripts": {
+    "build": "npx ts-node build.ts",
+    "lint": "npx eslint --ext .ts src/",
+    "lint:tests": "npx eslint --ext .ts spec/",
+    "start": "node -r module-alias/register ./dist --env=production",
+    "dev": "nodemon",
+    "test": "nodemon --config ./spec/nodemon.json",
+    "test:no-reloading": "npx ts-node --files -r tsconfig-paths/register ./spec"
+  },
+  "_moduleAliases": {
+    "@src": "dist"
+  },
+  "module-alias": {
+    "@src": "dist"
+  },
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "author": "Gavin Birkhoff",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.19",
+    "@types/fs-extra": "^11.0.2",
+    "@types/jsonfile": "^6.1.2",
+    "@types/node": "^20.8.4",
+    "eslint-config-lavy": "^1.0.2-Alpha",
+    "fs-extra": "^11.1.1",
+    "lavy": "^1.0.2-Alpha.0",
+    "module-alias": "^2.2.3",
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "helmet": "^7.0.0",
+    "jet-logger": "^1.3.1",
+    "jet-validator": "^1.1.1",
+    "jsonfile": "^6.1.0",
+    "morgan": "^1.10.0",
+    "ts-command-line-args": "^2.5.1"
+  }
+}
